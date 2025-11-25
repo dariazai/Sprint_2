@@ -2,7 +2,6 @@ package ru.yandex.praktikum.service;
 
 import ru.yandex.praktikum.model.Food;
 
-
 public class ShoppingCart {
     Food[] food = new Food[3];
 
