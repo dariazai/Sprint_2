@@ -1,9 +1,15 @@
 package ru.yandex.praktikum.model;
 
-public abstract class Food {
+public abstract class Food implements Discountable {
     protected int amount;
     protected double price;
     protected boolean isVegetarian;
+
+    protected Food(int amount, double price, boolean isVegetarian) {
+        this.amount = amount;
+        this.price = price;
+        this.isVegetarian = isVegetarian;
+    }
 
     public int getAmount() {
         return amount;
@@ -16,7 +22,5 @@ public abstract class Food {
     public boolean isVegetarian() {
         return isVegetarian;
     }
-    public double getPriceWithDiscount() {
-        return price;
-    }
+
 }

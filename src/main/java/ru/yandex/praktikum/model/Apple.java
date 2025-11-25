@@ -3,19 +3,19 @@ package ru.yandex.praktikum.model;
 import ru.yandex.praktikum.model.constants.Colour;
 import ru.yandex.praktikum.model.constants.Discount;
 
-public class Apple extends Food{
-    public String colour;
+public class Apple extends Food implements Discountable {
+    private final String colour;
     public Apple(int amount, double price, String color){
-        this.amount=amount;
-        this.price=price;
+        super(amount, price, true);
         this.colour=color;
-        this.isVegetarian=true;
+
     }
 @Override
-public double getPriceWithDiscount() {
-        if (colour == Colour.colorRed) {
-          return price*(1- Discount.redAppleDiscount/100);
+public double getDiscount() {
+    if (colour.equals(Colour.colorRed)) {
+        return Discount.redAppleDiscount;
         }
-        return price;
+    return 0.0;
     }
+
 }
