@@ -5,17 +5,19 @@ import ru.yandex.praktikum.model.constants.Discount;
 
 public class Apple extends Food implements Discountable {
     private final String colour;
-    public Apple(int amount, double price, String color){
+
+    public Apple(int amount, double price, String color) {
         super(amount, price, true);
-        this.colour=color;
+        this.colour = color;
 
     }
-@Override
-public double getDiscount() {
-    if (colour.equals(Colour.colorRed)) {
-        return Discount.redAppleDiscount;
+
+    @Override
+    public double getDiscount() {
+        if (colour.equals(Colour.colorRed)) {
+            return Discount.redAppleDiscount;
         }
-    return 0.0;
+        return 0.0;
     }
 
 }

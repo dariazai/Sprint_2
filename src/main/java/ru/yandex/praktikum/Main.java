@@ -18,6 +18,5 @@ public class Main {
         System.out.println(shoppingCart.getFullAmount());
         System.out.println(shoppingCart.getFullAmountWithDiscount());
         System.out.println(shoppingCart.getFullAmountVegan());
-
     }
 }
