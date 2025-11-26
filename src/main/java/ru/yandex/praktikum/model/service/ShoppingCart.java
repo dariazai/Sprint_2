@@ -1,4 +1,4 @@
-package ru.yandex.praktikum.service;
+package ru.yandex.praktikum.model.service;
 
 import ru.yandex.praktikum.model.Food;
 
